@@ -1,0 +1,79 @@
+<!-- <h2>Analizador de gramáticas</h2>
+
+
+<form [formGroup]="lexicographicanalyzer">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">enter code</label>
+                <textarea formControlName="manual" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+            <button [disabled]="loadPage" type="button" class="btn btn-primary" ">Evaluate</button>
+        </div>
+
+        <div class="col-md-6">
+            <label for="exampleFormControlTextarea1">load file .txt</label>
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" formControlName="archivo" class="custom-file-input" accept=".txt" id="inputGroupFile02" (change)="fileChanged($event)">
+                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Click for attach</label>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                </div>
+            </div>
+            <h6 *ngIf="attach === false">not found file</h6>
+            <h6 *ngIf="attach">{{ fileName }}</h6>
+            <button [disabled]="loadPage" type="button" class="btn btn-primary" (click)="uploadDocument(file)">attach</button>
+        </div>
+    </div>
+</form>
+
+<br>
+
+<div *ngIf="error" class="alert alert-warning" role="alert">
+    the code is not valid
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table" *ngIf="loadPage">
+            <thead>
+                <tr>
+                    <th scope="col">productions</th>
+                    <th scope="col">Productions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prod of cadena; let indice = index">
+                    <th>{{ indice }}</th>
+                    <td scope="row">{{ prod }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="col-md-6">
+        <div class="card" *ngIf="paginaCargada">
+            <div class="card-header">
+                Resultados:
+            </div>
+            <div class="card-body">
+                <h6 class="card-title">No terminales anulables:</h6>
+                <p class="card-text">{{ nAnulables.toString() }}</p>
+                <h6 class="card-title">Producciones anulables:</h6>
+                <p class="card-text">{{ producAnulables.toString() }}</p>
+                <h6 class="card-title">Primeros de cada produccion:</h6>
+                <p class="card-text" *ngFor="let primero of primerosProd; let indice = index">Primero produccion {{ indice }} = {{ primero }}</p>
+                <h6 class="card-title">Primeros de los no terminales (N):</h6>
+                <p class="card-text" *ngFor="let elemento of elementoGram">{{ elemento.valor }} = {{ elemento.primeros.toString() }}</p>
+                <h6 class="card-title">¿Es de la forma especial?</h6>
+                <p class="card-text">{{especial}}</p>
+                <h6 class="card-title">¿Es lineal por la derecha?</h6>
+                <p class="card-text">{{derecha}}</p>
+                <h6 class="card-title">¿Es tipo S?</h6>
+                <p class="card-text">{{s}}</p>
+            </div>
+        </div>
+    </div> -->
+</div> -->
