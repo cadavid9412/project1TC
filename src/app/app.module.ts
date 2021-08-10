@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
 //import { LexicographicanalyzerComponent } from './components/lexicographicAnalyzer/lexicographicanalyzer.component';
-//import { NodeComponent } from './services/node/node.component';
+//import { NodeComponent } from './services/node/node.service';
 
 
 // Import routes
