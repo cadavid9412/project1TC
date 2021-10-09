@@ -1,30 +1,30 @@
-<!-- <h2>Analizador de gramáticas</h2>
+<h2>Analizador de gramáticas</h2>
 
 
-<form [formGroup]="lexicographicanalyzer">
+<form [formGroup]="gramaticas">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">enter code</label>
+                <label for="exampleFormControlTextarea1">Ingreso manual de gramática</label>
                 <textarea formControlName="manual" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
-            <button [disabled]="loadPage" type="button" class="btn btn-primary" ">Evaluate</button>
+            <button [disabled]="paginaCargada" type="button" class="btn btn-primary" (click)="docCadena('manual')">Evaluar</button>
         </div>
 
         <div class="col-md-6">
-            <label for="exampleFormControlTextarea1">load file .txt</label>
+            <label for="exampleFormControlTextarea1">Carga de gramática desde archivo .txt</label>
             <div class="input-group mb-3">
                 <div class="custom-file">
                     <input type="file" formControlName="archivo" class="custom-file-input" accept=".txt" id="inputGroupFile02" (change)="fileChanged($event)">
-                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Click for attach</label>
+                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Click para adjuntar</label>
                 </div>
                 <div class="input-group-append">
                     <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
                 </div>
             </div>
-            <h6 *ngIf="attach === false">not found file</h6>
-            <h6 *ngIf="attach">{{ fileName }}</h6>
-            <button [disabled]="loadPage" type="button" class="btn btn-primary" (click)="uploadDocument(file)">attach</button>
+            <h6 *ngIf="adjunto === false">No hay archivo adjunto</h6>
+            <h6 *ngIf="adjunto">{{ nombreArchivo }}</h6>
+            <button [disabled]="paginaCargada" type="button" class="btn btn-primary" (click)="uploadDocument(file)">Adjuntar</button>
         </div>
     </div>
 </form>
@@ -32,16 +32,16 @@
 <br>
 
 <div *ngIf="error" class="alert alert-warning" role="alert">
-    the code is not valid
+    La expresión o la gramática ingresada no corresponde al formato necesario para ser evaluada
 </div>
 
 <div class="row">
     <div class="col-md-6">
-        <table class="table" *ngIf="loadPage">
+        <table class="table" *ngIf="paginaCargada">
             <thead>
                 <tr>
-                    <th scope="col">productions</th>
-                    <th scope="col">Productions</th>
+                    <th scope="col"># de produccion</th>
+                    <th scope="col">Producciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,7 +53,7 @@
         </table>
     </div>
 
-    <!-- <div class="col-md-6">
+    <div class="col-md-6">
         <div class="card" *ngIf="paginaCargada">
             <div class="card-header">
                 Resultados:
@@ -75,5 +75,5 @@
                 <p class="card-text">{{s}}</p>
             </div>
         </div>
-    </div> -->
-</div> -->
+    </div>
+</div>
