@@ -1,4 +1,4 @@
-/* @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .example-form {
     min-width: 150px;
     max-width: 500px;
@@ -7,4 +7,4 @@
 
 .example-full-width {
     width: 100%;
-} */
+}

@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DocumentationComponent } from './components/documentation/documentation.component';
-//import { LexicographicanalyzerComponent } from './components/lexicographicAnalyzer/lexicographicanalyzer.component';
-//import { NodeComponent } from './services/node/node.service';
+import { GramaticasComponent } from './components/gramatica/gramatica.component';
+
 
 
 // Import routes
@@ -18,12 +18,8 @@ import { ROUTES } from './app.routes';
 
 // Angular material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {MatInputModule} from '@angular/material/input';
-// import {MatListModule} from '@angular/material/list';
-
-
-
-
+ import {MatInputModule} from '@angular/material/input';
+ import {MatListModule} from '@angular/material/list';
 
 
 
@@ -31,17 +27,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HomeComponent,
-    //LexicographicanalyzerComponent,
+    GramaticasComponent,
     NavbarComponent,
     DocumentationComponent,
-    //NodeComponent
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot( ROUTES, { useHash: true } ),
-    // MatInputModule,
-    // MatListModule,
+    MatInputModule,
+    MatListModule,
     ReactiveFormsModule
   ],
   providers: [],

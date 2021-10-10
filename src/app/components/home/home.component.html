@@ -1,9 +1,13 @@
 <div class="jumbotron">
-    <h1 class="display-4">Lexicographic analyzer</h1>
-    <p class="lead">development by: Sebastian Cadavid Ramirez-Alejandro Castrillón Ciro-Universidad de Antioquia-2021-1</p>
+    <h1 class="display-4">Bienvenido a Gramáticas</h1>
+    <p class="lead">development by: Sebastian Cadavid Ramirez-Wilmer arley de Jesús Ceballos hoyos-Universidad de Antioquia-2021-1</p>
     <hr class="my-4">
-    <p>Click in analyze code:</p>
-    <p>where:</p>
-    <p> The symbol to indicate the null sequence is !</p>
-    <a class="btn btn-primary btn-lg" [routerLink]="['/lexicographicAnalyzer']" role="button">begin</a>
+    <p>Click en comenzar para analizar una gramática, un ejemplo de produccion es el siguiente: &lt;A&gt;~a&lt;A&gt;</p>
+    <p>donde:</p>
+    <p>"&lt;" y "&gt;" Indican un no terminal</p>
+    <p>Los terminales van sin las llaves, como el caracter "a"</p>
+    <p>El signo ~ divide el lado izquierdo del lado derecho de la producción</p>
+    <p>El símbolo para indicar la secuencia nula es !</p>
+    <p>Nota: No ingresar números al comienzo de la producción, el software detectará el número de la misma</p>
+    <a class="btn btn-primary btn-lg" [routerLink]="['/gramatica']" role="button">Comenzar</a>
 </div>

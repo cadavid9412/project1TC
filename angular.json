@@ -69,6 +69,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "practica1:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "practica1:build:production"

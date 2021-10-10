@@ -1,7 +1,7 @@
 <h2>Analizador de gramáticas</h2>
 
 
-<form [formGroup]="gramaticas">
+<form [formGroup]="gramatica">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -67,11 +67,9 @@
                 <p class="card-text" *ngFor="let primero of primerosProd; let indice = index">Primero produccion {{ indice }} = {{ primero }}</p>
                 <h6 class="card-title">Primeros de los no terminales (N):</h6>
                 <p class="card-text" *ngFor="let elemento of elementoGram">{{ elemento.valor }} = {{ elemento.primeros.toString() }}</p>
-                <h6 class="card-title">¿Es de la forma especial?</h6>
+                <h6 class="card-title">¿Es de la forma ll?</h6>
                 <p class="card-text">{{especial}}</p>
-                <h6 class="card-title">¿Es lineal por la derecha?</h6>
                 <p class="card-text">{{derecha}}</p>
-                <h6 class="card-title">¿Es tipo S?</h6>
                 <p class="card-text">{{s}}</p>
             </div>
         </div>

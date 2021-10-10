@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { INode } from '../interfaces/node.interface';
-import { TFunction } from '../types/Types';
+import { TFunction } from '/home/sebastian/Documentos/compiladores/proyecto final/project1TC/src/app/components/types/Types';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class LinkedListService<T> {
 
   constructor() { }
 
-  // Métodos para el append:
+  // Methods for the append:
 
   public isEmpty = () => !this.head;
 
@@ -117,7 +117,7 @@ public find = (compare: TFunction<T, boolean>): INode<T> => {
   return null;
 }
 
-// Insertar al comienzo
+
 public insert = (value: T): LinkedListService<T> => {
   const node = this.forgeNode(value);
   node.next = this.head;
