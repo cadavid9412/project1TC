@@ -5,14 +5,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Ingreso manual de gramática</label>
+                <label for="exampleFormControlTextarea1">Ingreso manual de codigo en java</label>
                 <textarea formControlName="manual" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <button [disabled]="paginaCargada" type="button" class="btn btn-primary" (click)="docCadena('manual')">Evaluar</button>
         </div>
 
         <div class="col-md-6">
-            <label for="exampleFormControlTextarea1">Carga de gramática desde archivo .txt</label>
+            <label for="exampleFormControlTextarea1">Carga de codigo desde archivo .txt</label>
             <div class="input-group mb-3">
                 <div class="custom-file">
                     <input type="file" formControlName="archivo" class="custom-file-input" accept=".txt" id="inputGroupFile02" (change)="fileChanged($event)">
@@ -32,7 +32,7 @@
 <br>
 
 <div *ngIf="error" class="alert alert-warning" role="alert">
-    La expresión o la gramática ingresada no corresponde al formato necesario para ser evaluada
+    Lel codigo ingresadao no corresponde al formato necesario para ser evaluada
 </div>
 
 <div class="row">
