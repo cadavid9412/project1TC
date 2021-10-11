@@ -403,7 +403,7 @@ export class GramaticasComponent implements OnInit {
             this.primerosProd.push(vector);
             break;
           case 'N':
-            if (siguiente.value.getAnulable() === false) { // El no terminal es no es anulable
+            if (siguiente.value.getAnulable() === false) { 
               let primerosTerm = this.primeroInd(siguiente.value.getValue());
               this.primerosProd.push(primerosTerm);
               break;
@@ -517,12 +517,11 @@ export class GramaticasComponent implements OnInit {
       console.log(this.primerosProd);
       let especial = this.analizador.isFormaEspecial(this.producciones);
       this.especial = especial;
-      console.log('Es de la forma especial: ' + especial);
+ 
       let derecha = this.analizador.isLinealXDerecha(this.producciones);
       this.derecha = derecha;
-      console.log('Es lineal por la derecha = ' + derecha);
+
       let s = this.analizador.isGramS(this.producciones);
-      console.log('Es gramática s: ' + s);
       this.s = s;
     } else {
       this.error = true;

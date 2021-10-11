@@ -65,8 +65,8 @@ export class AnalizadorGramaticalService {
     return condicion;
   }
 
-  // Cond 1: Todas las producciones comienzan con no terminal
-  // Cond 2: las producciones que empiezan por el mismo N, comienzan por diferente terminal
+  // Cond 1: All productions start with non-terminal
+  // Cond 2: productions starting with the same N, start with different terminus
   isGramS(producciones: LinkedListService<NodoService>[]) {
     let s = true;
     for (let produccion of producciones) {
